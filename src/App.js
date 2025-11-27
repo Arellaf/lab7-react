@@ -11,14 +11,13 @@ function App() {
         <>
             <Header />
 
-            <div style={{ margin: "80px" }}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contacts" element={<Contacts />} />
-                    <Route path="/blog" element={<Blog />} />
-                </Routes>
-            </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="/blog" element={<Blog />} />
+            </Routes>
+
         </>
     );
 }

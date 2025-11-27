@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import CarouselBoxHk from "../components/CarouselBoxHk";
+
 class Home extends Component {
   render() {
     return (
-      <h1>
-        Home
-      </h1>
+      <CarouselBoxHk />
     );
   }
 }
+
 export default Home;
