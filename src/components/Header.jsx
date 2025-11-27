@@ -8,7 +8,7 @@ import {
     Button
 } from "react-bootstrap";
 
-import logo from "../images/logo.png";  
+import logo from "../images/logo.png";
 
 export default class Header extends Component {
     render() {
@@ -21,7 +21,6 @@ export default class Header extends Component {
                                 src={logo}
                                 height="30"
                                 width="30"
-                                color="wight"
                                 className="d-inline-block align-top"
                                 alt="Logo"
                             />{" "}
@@ -44,7 +43,6 @@ export default class Header extends Component {
                                     placeholder="Search"
                                     className="me-sm-3"
                                 />
-
                                 <Button variant="outline-info">Search</Button>
                             </Form>
                         </Navbar.Collapse>
