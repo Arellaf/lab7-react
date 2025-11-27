@@ -11,7 +11,6 @@ class CarouselBoxHk extends Component {
   render() {
     return (
       <Carousel>
-
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -59,7 +58,6 @@ class CarouselBoxHk extends Component {
             <p>A beautiful river flowing through nature, with a picturesque house in the background creating a stunning view.</p>
           </Carousel.Caption>
         </Carousel.Item>
-
       </Carousel>
     );
   }
