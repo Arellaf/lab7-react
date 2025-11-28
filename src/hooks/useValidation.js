@@ -34,18 +34,18 @@ export const useValidation = () => {
         }
     };
 
-const blurHandler = (e) => {
-    switch (e.target.name) {
-        case "email":
-            setEmailDirty(true);
-            break;
-        case "password":
-            setPasswordDirty(true);
-            break;
-        default:
-            break; // щоб ESLint не сварився
-    }
-};
+    const blurHandler = (e) => {
+        switch (e.target.name) {
+            case "email":
+                setEmailDirty(true);
+                break;
+            case "password":
+                setPasswordDirty(true);
+                break;
+            default:
+                break;
+        }
+    };
 
     useEffect(() => {
         if (emailError || passwordError) {
