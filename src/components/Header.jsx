@@ -10,12 +10,25 @@ import {
 } from "react-bootstrap";
 
 import logo from "../images/logo.png";
+import { useValidation } from "../hooks/useValidation";
 
 export default function Header() {
-
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const {
+        email,
+        password,
+        emailDirty,
+        passwordDirty,
+        emailError,
+        passwordError,
+        formValid,
+        emailHandler,
+        passwordHandler,
+        blurHandler
+    } = useValidation();
 
     return (
         <>
@@ -28,22 +41,49 @@ export default function Header() {
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email Address</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" className="mt-3"/>
-                            <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
-                            </Form.Text>
+
+                            {(emailDirty && emailError) && (
+                                <div style={{ color: "red" }}>{emailError}</div>
+                            )}
+
+                            <Form.Control
+                                onChange={emailHandler}
+                                name="email"
+                                value={email}
+                                onBlur={blurHandler}
+                                type="email"
+                                placeholder="Enter email"
+                                className="mt-3"
+                            />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicPassword" className="mt-3">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Enter password" />
+
+                            {(passwordDirty && passwordError) && (
+                                <div style={{ color: "red" }}>{passwordError}</div>
+                            )}
+
+                            <Form.Control
+                                onChange={passwordHandler}
+                                name="password"
+                                value={password}
+                                onBlur={blurHandler}
+                                type="password"
+                                placeholder="Enter password"
+                            />
                         </Form.Group>
 
                         <Form.Group controlId="formBasicCheckbox" className="mt-3">
                             <Form.Check type="checkbox" label="Remember me" />
                         </Form.Group>
 
-                        <Button variant="primary" type="submit" className="mt-3">
+                        <Button
+                            disabled={!formValid}
+                            variant="primary"
+                            type="submit"
+                            className="mt-3"
+                        >
                             Submit
                         </Button>
                     </Form>
