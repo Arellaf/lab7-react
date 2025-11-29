@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import CarouselBoxHk from "../components/CarouselBoxHk";
+import { Link } from "react-router-dom";
 
 import Team1 from '../assets/Team1.jpg';
 import Team2 from '../assets/Team2.jpg';
 import Team3 from '../assets/Team3.jpg';
 
-import { Button, Card, Container } from "react-bootstrap";
+import { Card, Container } from "react-bootstrap";
 
 class Home extends Component {
   render() {
@@ -26,7 +27,9 @@ class Home extends Component {
                   <Card.Text>
                     A group of skilled developers working on core system features.
                   </Card.Text>
-                  <Button variant="primary">Learn more</Button>
+                  <Link to="/team/development" className="btn btn-primary">
+                    Learn more
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
@@ -39,7 +42,9 @@ class Home extends Component {
                   <Card.Text>
                     Team responsible for analysis, data collection, and experiments.
                   </Card.Text>
-                  <Button variant="primary">Learn more</Button>
+                  <Link to="/team/research" className="btn btn-primary">
+                    Learn more
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
@@ -52,7 +57,9 @@ class Home extends Component {
                   <Card.Text>
                     Specialists who manage branding, communication, and strategy.
                   </Card.Text>
-                  <Button variant="primary">Learn more</Button>
+                  <Link to="/team/marketing" className="btn btn-primary">
+                    Learn more
+                  </Link>
                 </Card.Body>
               </Card>
             </div>
