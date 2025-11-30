@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import { Container, Col, Row, Card, ListGroup } from "react-bootstrap";
+import { Container, Col, Row, Card, ListGroup, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import PostImg1 from "../assets/PostImg1.png";
+import PostImg2 from "../assets/PostImg2.png";
+import PostImg3 from "../assets/PostImg3.png";
 
 class Blog extends Component {
   render() {
@@ -26,6 +29,7 @@ class Blog extends Component {
                   Її головна перевага - компонентний підхід, що дозволяє розбивати інтерфейс на незалежні частини та легко їх перевикористовувати.
                   Завдяки цьому React став стандартом у сучасній фронтенд-розробці, забезпечуючи швидкість, масштабованість і зручність роботи з UI.
                 </p>
+                <Link to="/post/react-intro" className="text-primary"><Button variant="primary">Дізнатися більше</Button></Link>
               </div>
             </div>
 
@@ -35,7 +39,7 @@ class Blog extends Component {
                   width={150}
                   height={150}
                   className="mr-3 rounded-3 shadow-sm"
-                  src={PostImg1}
+                  src={PostImg2}
                   alt="post"
                   style={{ objectFit: "cover" }}
                 />
@@ -47,6 +51,7 @@ class Blog extends Component {
                   Вони спрощують логіку компонентів, роблять код чистішим та легшим у підтримці.
                   Найпопулярніші - useState, useEffect і useContext - допомагають керувати станом, виконувати побічні дії та працювати зі сховищами даних.
                 </p>
+                <Link to="/post/hooks" className="text-primary"><Button variant="primary">Дізнатися більше</Button></Link>
               </div>
             </div>
 
@@ -56,7 +61,7 @@ class Blog extends Component {
                   width={150}
                   height={150}
                   className="mr-3 rounded-3 shadow-sm"
-                  src={PostImg1}
+                  src={PostImg3}
                   alt="post"
                   style={{ objectFit: "cover" }}
                 />
@@ -69,6 +74,7 @@ class Blog extends Component {
                   Через такі дивні та неочевидні випадки JavaScript вважається мовою з одним із найскладніших механізмів неявного перетворення типів -
                   і саме тому багато розробників переходять на TypeScript, який додає сувору типізацію та дозволяє уникати більшості подібних помилок.
                 </p>
+                <Link to="/post/js-fact" className="text-primary"><Button variant="primary">Дізнатися більше</Button></Link>
               </div>
             </div>
           </Col>
@@ -77,19 +83,19 @@ class Blog extends Component {
             <h5 className="text-center mt-5 text-primary">Категорії</h5>
             <Card>
               <ListGroup variant="flush">
-                <ListGroup.Item>категорія 1</ListGroup.Item>
-                <ListGroup.Item>категорія 2</ListGroup.Item>
-                <ListGroup.Item>категорія 3</ListGroup.Item>
-                <ListGroup.Item>категорія 4</ListGroup.Item>
-                <ListGroup.Item>категорія 5</ListGroup.Item>
+                <ListGroup.Item>JavaScript</ListGroup.Item>
+                <ListGroup.Item>Java</ListGroup.Item>
+                <ListGroup.Item>C++</ListGroup.Item>
+                <ListGroup.Item>C#</ListGroup.Item>
+                <ListGroup.Item>Assembler</ListGroup.Item>
               </ListGroup>
             </Card>
 
             <Card className="mt-3 bg-light">
               <Card.Body>
-                <Card.Title className="text-center text-primary">Slide widget</Card.Title>
-                <Card.Text className="text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                <Card.Title className="text-center text-primary">Цікавий факт</Card.Title>
+                <Card.Text>
+                  Найперший комп'ютерний вірус був створений у 1983 році як експеримент і не мав шкідливої мети.
                 </Card.Text>
               </Card.Body>
             </Card>
